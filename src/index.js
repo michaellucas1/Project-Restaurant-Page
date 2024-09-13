@@ -1,1 +1,1 @@
-console.log("hellow World!");
+import "./index.css";
