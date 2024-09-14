@@ -1,14 +1,17 @@
 body{
     margin:0;
     padding:0;
+    background-color:#282520;
+    color:white;
 }
 header{
+    position:fixed;
     display:flex;
     justify-content:space-evenly;
     align-items: center;
-    background-color: #314f76;
-    color:white;
     padding:0 1rem 0 1rem;
+    width:100%;
+    background-color: #0000007d;
 }
 nav{
     display:flex;
@@ -17,29 +20,59 @@ nav{
 }
 button{
     margin-left:1rem;
-    padding:0.5rem;
     background-color: rgba(255, 255, 255, 0);
     border:none;
+    border-radius: 100%;
+    padding:1rem 0.5rem 1rem 0.5rem;
     color:white;
 }
 button:hover{
-    background-color: rgba(0, 0, 0, 0.35);
-    box-shadow: 0 0 10px 25px rgb(0,0,0,0.3);
+    background-image: url("./resources/svg/neptune-planet-svgrepo-com.svg");
+    background-size:cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
 }
 .wrapper{
     display:flex;
     justify-content: center;  
-    background-color: rgba(0, 0, 0, 0.099);
+    align-items:flex-end;
+    background-image:url("./resources/images/neptune-4654560_1280.jpg");
+    background-position:center;
+    background-repeat: no-repeat;
+    height:15rem;
+}
+.wrapper > h2 {
+    font-size:50px;
 }
 h1 > span{
     color:rgb(253, 17, 0);
 }
+.intro{
+    height:22.5em;
+    background-color: #0000001f;
+    padding:50px;
+}
 .restaurant-icon{
-    background-image: url(./resources/svg/neptune-planet-svgrepo-com.svg);
+    background-image: url("./resources/svg/neptune-planet-svgrepo-com.svg");
+}
+.crab-icon{
+    background-image: url("./resources/svg/crab-color-icon.svg");
+    padding:0 50px 0 50px;
+    margin-left:50px;
+}
+.icon{
     background-size:contain;
     background-repeat: no-repeat;
     width:50px;
     height:50px;
-    border:1px solid rgba(0, 0, 0, 0.095);
-    border-radius: 50%;
+}
+.message{
+    overflow:auto;
+    background-color:rgba(255, 255, 255, 0.075);
+    height:20rem;
+    padding:25px;
+}
+@media (min-width: 500px){
+
 }
