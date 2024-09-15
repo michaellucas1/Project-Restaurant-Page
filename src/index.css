@@ -3,10 +3,8 @@ body{
     padding:0;
     background-color:#282520;
     color:white;
+    box-sizing:border-box;
   
-}
-header,nav,button{
-    transition: font-size 2s, width 2s, height 2s;
 }
 header{
     position:fixed;
@@ -16,7 +14,7 @@ header{
     padding:0 1rem 0 1rem;
     width:100%;
     background-color: #0000007d;
-    height:5rem;
+    height:6rem;
 }
 nav{
     margin-left:auto;
@@ -46,20 +44,22 @@ button:hover{
     justify-content: center;  
     align-items:flex-end;
     background-image:url("./resources/images/neptune-4654560_1280.jpg");
+    background-size:cover; 
     background-position:center;
     background-repeat: no-repeat;
-    height:15rem;
+    height:18rem;
 }
 .wrapper > h2 {
     font-size:50px;
+    padding-bottom:30px;
 }
 h1 > span{
     color:rgb(253, 17, 0);
 }
 .intro{
-    height:22.5em;
+    height:22rem;
     background-color: #0000001f;
-    padding:50px;
+    padding:125px 125px 55px 125px;
 }
 .restaurant-icon{
     background-image: url("./resources/svg/neptune-planet-svgrepo-com.svg");
@@ -81,8 +81,7 @@ h1 > span{
 .message{
     overflow:auto;
     background-color:rgba(255, 255, 255, 0.075);
-    height:20rem;
-    padding:25px;
+    padding:100px;
     font-size:18px;
     text-align:center;
     letter-spacing: 2px;
