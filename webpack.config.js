@@ -1,6 +1,7 @@
 // webpack.config.js
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const json5 = require('json5');//Customize parser of JSON modules
 
 module.exports = {
   mode: "development",
@@ -12,7 +13,7 @@ module.exports = {
   },
   devtool: "eval-source-map",
   devServer: {
-    watchFiles:["./src/template.html", "./src/index.css"],
+    watchFiles:["./src/template.html", "./src/styles/index.css"],
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -25,7 +26,16 @@ module.exports = {
             test: /\.css$/,
             use: ["style-loader", "css-loader"],
 
-        }
+        },
+        {//Customize parser of JSON modules
+          //command to run
+          //npm install toml yamljs json5 --save-dev
+          test: /\.json5$/i,
+          type: 'json',
+          parser: {
+            parse: json5.parse,
+          },
+        },
     ],
   },
 };
