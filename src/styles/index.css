@@ -1,0 +1,130 @@
+body{
+    margin:0;
+    padding:0;
+    background-color:#282520;
+    color:white;
+    box-sizing:border-box;
+  
+}
+h2{
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+header,
+nav,
+.wrapper{
+    display:flex;
+}
+
+header{
+    position:fixed;
+    justify-content:flex-start;
+    align-items: center;
+    padding:0 1rem 0 1rem;
+    width:100%;
+    height:6rem;
+    background-color: rgb(35, 32, 28,0.4);
+    transition: background-color 0.5s ease-in-out;
+}
+.hero-banner > h2 {
+    content:" hello";
+}
+nav{
+    margin-left:auto;
+    justify-content: flex-end;
+    margin-right:3rem
+
+}
+button{
+    margin-left:1rem;
+    background-color: rgba(255, 255, 255, 0);
+    border:none;
+    border-radius: 100%;
+    padding:1rem 0.5rem 1rem 0.5rem;
+    color:white;
+    flex-shrink:0;
+    font-size:16px;
+}
+button:hover{
+    background-image: url("../resources/svg/neptune-planet-svgrepo-com.svg");
+    background-size:cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+}
+.wrapper{
+    justify-content: center;  
+    align-items:flex-end;
+    background-image:url("../resources/images/neptune-4654560_1280.jpg");
+    background-size:cover; 
+    background-position:center;
+    background-repeat: no-repeat;
+    height:16rem;
+    padding-bottom:2rem;
+}
+.wrapper > h2 {
+    font-size:50px;
+}
+.crab-color{
+    color:rgb(253, 17, 0);
+    margin:0 1rem 0 1rem;
+    white-space:nowrap;
+}
+.intro{
+    background-color: #0000001f;
+    padding:10px;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, 1fr);
+    grid-template-rows:1fr;
+    gap:20px 20px;
+    align-items: baseline;
+}
+.restaurant-icon{
+    background-image: url("../resources/svg/neptune-planet-svgrepo-com.svg");
+    margin-right:3rem;
+    margin-left:3rem;
+    flex-shrink:0;
+}
+.crab-icon{
+    background-image: url("../resources/svg/crab-color-icon.svg");
+    padding:0 50px 0 50px;
+    margin-left:50px;
+}
+.icon{
+    background-size:contain;
+    background-repeat: no-repeat;
+    width:50px;
+    height:50px;
+}
+
+.message{
+    background-color:rgba(255, 255, 255, 0.075);
+    padding:0 100px 15px 100px;
+    font-size:18px;
+    letter-spacing: 2px;
+    line-height: 2;
+}
+.home-page:nth-of-type(1),
+#contact,
+.about-page,
+.menu-page > h2:nth-of-type(1){
+    text-align: center;
+}
+
+@media (max-width: 600px){
+    button{
+        padding:0;
+    }
+    h1{
+        font-size:28px;
+    }
+    nav{
+        font-size:16px;
+        margin-right:3rem;
+    }
+   
+    .restaurant-icon{
+        width:45px;
+        height:45px;
+    }
+}

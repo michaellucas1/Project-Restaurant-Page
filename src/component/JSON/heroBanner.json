@@ -1,0 +1,1 @@
+[{"elementName":"parentDiv","tagName":"div","className":"wrapper hero-banner","isParent":true,"childOf":"body"},{"elementName":"childH2","tagName":"h2","isParent":false,"childOf":"parentDiv","content":"Welcome! "},{"elementName":"childSpan","tagName":"span","className":"crab-icon icon","isParent":false,"childOf":"parentDiv"}]
