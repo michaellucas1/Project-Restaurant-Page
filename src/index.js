@@ -1,4 +1,7 @@
-import "./index.css";
+import "./styles/index.css";
+import Header from "./component/Header";
+import HeroBanner from "./component/HeroBanner";
+
 class MyComponent {
     constructor(){
         this.header = document.querySelector('.header');
@@ -57,110 +60,7 @@ class MyComponent {
         console.log("this is  the about page")
     }
 }
-class Banner{
-    constructor(){
-
-    }
-}
-class Header{
-    constructor(){
-        this.buttonArray= new Array(4);
-        this.createButtons();
-        this.nav = document.createElement('nav');
-        this.append(this.nav,this.buttonArray);
-        this.elements=new Array(2);
-        this.createElements();
-        this.append(this.elements[0],this.elements[1]);
-        this.div = document.createElement('div');
-        this.div.classList.add("restaurant-icon","icon");
-        this.header = document.createElement('header');
-        this.header.classList.add("header");
-        this.append(this.header,this.div);
-        this.append(this.header,this.elements[0])
-        this.append(this.header,this.nav);
-        this.body = document.body;
-        this.append(this.body,this.header);
-    }
-
-    createElements(){
-        let i=0;
-        const tagNames=['h1','span'];
-        const contents=["Neptune's","Crab House"];
-        while(this.elements.length>i){
-            this.elements[i] = document.createElement(tagNames[i]);
-            this.elements[i].textContent = `${contents[i]} `;
-            i++;
-        }
-    }            
-    append(parent,child){
-        if(Array.isArray(child)){
-            let i=0;
-            while(child.length>i){
-                parent.appendChild(child[i]);
-                i++;
-            }
-        }
-        else{
-            parent.appendChild(child);
-        }
-    }
-    createButtons(){
-        let i =0;
-        this.buttonsText =["Home","Menu","Contact","About"];
-        while(this.buttonArray.length > i){
-            this.buttonArray[i]=document.createElement('button'); v
-            this.buttonArray[i].textContent=this.buttonsText[i];
-            i++;
-        }
-
-    }
-}
-class Home{
-    constructor(){
-
-    }
-}
-class Menu{
-    constructor(){}
-}
-class Contact{
-    constructor(){}
-}
-class About{
-    constructor(){}
-}
-//const header = new Header();
-//const component =new MyComponent();
-const heroBannerObject = 
-[
-    {
-        elementName:"parentDiv",
-        tagName:"div",
-        className:"wrapper hero-banner",
-        isParent:true,
-        isChild:true,
-        parentOf:"childH2"
-    },
-    {
-        elementName:"childH2",
-        tagName:"h2",
-        isParent:true,
-        isChild:true,
-        parentOf:"",
-        childOf:"parentDiv",
-    },
-    {
-        elementName:"childSpan",
-        tagName:"span",
-        className:"crab-icon icon",
-        isParent:false,
-        isChild:true,
-        childOf:"childH2",
-    },
-];
-class Renderer{
-    constructor(heroBannerObject){
-        console.log(heroBannerObject);
-    }
-}
-const render = new Renderer(heroBannerObject);
+const header = new Header();
+header.render();
+const heroBanner = new HeroBanner();
+heroBanner.render();
