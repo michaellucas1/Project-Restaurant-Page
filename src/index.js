@@ -1,6 +1,7 @@
 import "./styles/index.css";
 import displayHeader from "./component/Header";
 import displayBanner from "./component/HeroBanner";
+import displayHome from "./component/HomePage";
 
 class MyComponent {
     constructor(){
@@ -62,9 +63,8 @@ class MyComponent {
 }
 displayBanner.init();
 displayHeader.init();
-displayBanner.add();
-displayHeader.add();
-displayHeader.remove();
-displayBanner.remove();
 displayHeader.add();
 displayBanner.add();
+displayHome.init();
+displayHome.add();
+
