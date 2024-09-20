@@ -1,5 +1,7 @@
 export default class Renderer{
-    constructor(elementObjArray){
+    constructor(){
+    }
+    initialize(elementObjArray){
         this.frag = document.createDocumentFragment();
         this.fragObject={docFrag:this.frag,elementName:"docFrag"};
         this.fragArray =[this.fragObject];
@@ -11,28 +13,67 @@ export default class Renderer{
         this.secondGenChild=[];
         this.secondGenParent=[];
         this.startCreate(elementObjArray);
-        this.startAppend([...this.firstGenParent,...this.secondGenParent],this.secondGenChild);
-        this.startAppend(this.firstGenParent,this.secondGenParent);
-        this.startAppend(this.fragArray,[...this.firstGenChild,...this.firstGenParent]);
-        this.startAppend(this.bodyArray,this.fragArray);
+    }
+    detachAll(){
+        this.startDetach([...this.firstGenParent,...this.secondGenParent],this.secondGenChild);
+        this.startDetach([...this.firstGenParent,...this.secondGenParent],this.secondGenParent);
+        //this.startDetach(this.fragArray,[...this.firstGenChild,...this.firstGenParent]);
+        //this.startDetach(this.bodyArray,this.fragArray);
     }
     appendChild(...args){
         if(args.length===2 && args !==null){
             args[0][args[0].elementName].appendChild(args[1][args[1].elementName]);
         }
     }
+    appendAll(){
+        
+        this.startAppend([...this.firstGenParent,...this.secondGenParent],this.secondGenChild);
+        this.startAppend([...this.firstGenParent,...this.secondGenParent],this.secondGenParent);
+        this.startAppend(this.fragArray,[...this.firstGenChild,...this.firstGenParent]);
+        this.startAppend(this.bodyArray,this.fragArray)
+
+    }
     startAppend(parents,children){ 
         let i=0;
-        while(parents.length>i){
-            let j=0;
-            while(children.length >j){
-                if(parents[i].elementName==='docFrag' || parents[i].elementName==='body'){
-                    this.appendChild(parents[i],children[j]);
+        while(children.length>i){
+            if(parents[0].elementName==='docFrag' || parents[0].elementName==='body'){
+                this.appendChild(parents[0],children[i]);
+            }
+            else{
+                const found = parents.find((element, index)=>{
+                    element.elementName===children[i].childOf;
+                    if(element.elementName===children[i].childOf){
+                        return element;
+                    }
+                });
+                if(found){
+                    this.appendChild(found,children[i]);
                 }
-                else if(parents[i].elementName===children[j].childOf){
-                    this.appendChild(parents[i],children[j]);
+            }
+            i++;
+        }
+    }
+    detachChild(...args){
+        if(args.length===2 && args !==null){
+            args[0][args[0].elementName].removeChild(args[1][args[1].elementName]);
+        }
+    }
+    startDetach(parents,children){ 
+        let i=0;
+        while(children.length>i){
+            if(parents[0].elementName==='docFrag' || parents[0].elementName==='body'){
+                this.detachChild(parents[0],children[i]);
+            }
+            else{
+                const found = parents.find((element, index)=>{
+                    element.elementName===children[i].childOf;
+                    if(element.elementName===children[i].childOf){
+                        return element;
+                    }
+                });
+                if(found){
+                    this.detachChild(found,children[i]);
                 }
-                j++;
             }
             i++;
         }
