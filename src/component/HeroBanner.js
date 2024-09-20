@@ -1,10 +1,4 @@
-import Renderer from "./Renderer";
+import Display from "./Display";
 import data from "./JSON/heroBanner.json"
-export default class HeroBanner{
-    constructor(){
-    }
-    render(){
-        new Renderer(data);
-    }
-
-}
+const heroBanner = new Display(data);
+export default heroBanner;
