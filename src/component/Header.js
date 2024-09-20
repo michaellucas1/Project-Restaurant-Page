@@ -1,10 +1,4 @@
-import Renderer from "./Renderer";
+import Display from "./Display";
 import data from "./JSON/header.json"
-export default class Header{
-    constructor(){
-    }
-    render(){
-        new Renderer(data);
-    }
-
-}
+const header = new Display(data);
+export default header;
