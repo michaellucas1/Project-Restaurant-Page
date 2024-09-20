@@ -15,10 +15,10 @@ export default class Renderer{
         this.startCreate(elementObjArray);
     }
     detachAll(){
+        console.log(this.fragArray);
         this.startDetach([...this.firstGenParent,...this.secondGenParent],this.secondGenChild);
         this.startDetach([...this.firstGenParent,...this.secondGenParent],this.secondGenParent);
-        //this.startDetach(this.fragArray,[...this.firstGenChild,...this.firstGenParent]);
-        //this.startDetach(this.bodyArray,this.fragArray);
+        this.startDetach(this.bodyArray,[...this.firstGenChild,...this.firstGenParent]);
     }
     appendChild(...args){
         if(args.length===2 && args !==null){
@@ -26,7 +26,6 @@ export default class Renderer{
         }
     }
     appendAll(){
-        
         this.startAppend([...this.firstGenParent,...this.secondGenParent],this.secondGenChild);
         this.startAppend([...this.firstGenParent,...this.secondGenParent],this.secondGenParent);
         this.startAppend(this.fragArray,[...this.firstGenChild,...this.firstGenParent]);
