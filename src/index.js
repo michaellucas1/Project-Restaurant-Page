@@ -1,6 +1,6 @@
 import "./styles/index.css";
-import Header from "./component/Header";
-import HeroBanner from "./component/HeroBanner";
+import displayHeader from "./component/Header";
+import displayBanner from "./component/HeroBanner";
 
 class MyComponent {
     constructor(){
@@ -60,7 +60,11 @@ class MyComponent {
         console.log("this is  the about page")
     }
 }
-const header = new Header();
-header.render();
-const heroBanner = new HeroBanner();
-heroBanner.render();
+displayBanner.init();
+displayHeader.init();
+displayBanner.add();
+displayHeader.add();
+displayHeader.remove();
+displayBanner.remove();
+displayHeader.add();
+displayBanner.add();
