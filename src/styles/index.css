@@ -15,6 +15,7 @@ header{
     position:fixed;
     justify-content:flex-start;
     align-items: center;
+    flex-wrap: wrap;
     padding:0 1rem 0 1rem;
     width:100%;
     height:6rem;
@@ -22,7 +23,8 @@ header{
     transition: background-color 0.5s ease-in-out;
 }
 .hero-banner > h2 {
-    content:" hello";
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 nav{
     margin-left:auto;
@@ -41,12 +43,16 @@ button{
     font-size:16px;
 }
 button:hover{
+    color:red;
+}
+/*
+button:hover{
     background-image: url("../resources/svg/neptune-planet-svgrepo-com.svg");
     background-size:cover;
     background-position:center;
     background-repeat: no-repeat;
     filter: grayscale(100%);
-}
+}*/
 .wrapper{
     justify-content: center;  
     align-items:flex-end;
@@ -71,7 +77,7 @@ button:hover{
     display:grid;
     grid-template-columns: repeat(auto-fit, 1fr);
     grid-template-rows:1fr;
-    gap:20px 20px;
+    gap:15px 15px;
     align-items: baseline;
 }
 .restaurant-icon{
@@ -102,12 +108,12 @@ button:hover{
 .home-page:nth-of-type(1),
 #contact,
 .about-page,
-.menu-page > h2:nth-of-type(1),
-.home-page > h2{
+.menu-page > h1:nth-of-type(1),
+.home-page > h2:nth-of-type(1){
     text-align: center;
 }
 
-@media (max-width: 600px){
+@media (min-width: 460px){
     button{
         padding:0;
     }
@@ -118,7 +124,6 @@ button:hover{
         font-size:16px;
         margin-right:3rem;
     }
-   
     .restaurant-icon{
         width:45px;
         height:45px;
