@@ -1,0 +1,18 @@
+[{"elementName":"parentDiv","tagName":"div","className":"content","isParent":true,"childOf":"body"},
+{"elementName":"childDivOne","tagName":"div", "isParent":true,"className":"grid","childOf":"parentDiv"},
+
+{"elementName":"childDivTwo","tagName":"div","className":"message about-page","isParent":true,"childOf":"childDivOne"},
+{"elementName":"childH2One","tagName":"h1","isParent":false,"childOf":"childDivTwo","content":"About"},
+{"elementName":"childPOne","tagName":"p","isParent":false,"childOf":"childDivTwo","content":"Neptune's Crab house, where the oceans's bounty meets culinary excellence! Located in the heart of Atlantis, our restaurant is offers wide variety of seafood in our menu that all seafood lovers can enjoy."},
+
+{"elementName":"childDivThree","tagName":"div","className":"message about-page","isParent":true,"childOf":"childDivOne"},
+{"elementName":"childH2Two","tagName":"h2","isParent":false,"childOf":"childDivThree","content":"Our Atmosphere"},
+{"elementName":"childPTwo","tagName":"p","isParent":false,"childOf":"childDivThree","content":"At Neptune's Crab House, we pride ourselves on our signature crab dishes.From succulent steamed crabs to our famous crab cakes, each dish is crafted with the freshest ingredients and a touch of culinary magic. Our menu also features a variety of other seafood delights, ensuring there's something for everyone."},
+
+{"elementName":"childDivFour","tagName":"div","className":"message about-page","isParent":true,"childOf":"childDivOne"},
+{"elementName":"childH2Three","tagName":"h2","isParent":false,"childOf":"childDivFour","content":"Our Specialty"},
+{"elementName":"childPThree","tagName":"p","isParent":false,"childOf":"childDivFour","content":"Step into Neptune's Crab House and be transported to an underwater paradise. Our nautical-themed decor, complete with oceanic murals and ambient lighting, creates a relaxing and inviting atmosphere perfect for family dinners, romantic dates, or casual get-togethers with friends."},
+
+{"elementName":"childDivFive","tagName":"div","className":"message about-page","isParent":true,"childOf":"childDivOne"},
+{"elementName":"childH2Four","tagName":"h2","isParent":false,"childOf":"childDivFive","content":"Join Us"},
+{"elementName":"childPFour","tagName":"p","isParent":false,"childOf":"childDivFive","content":"Whether you're a local or a visitor, we invite you to dive into an unforgettable dining experience at Neptune's Crab House. Come and savor the flavors of the sea, where every meal is a celebration of the ocean's treasures."}]
