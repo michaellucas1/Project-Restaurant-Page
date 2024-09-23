@@ -15,7 +15,6 @@ export default class Renderer{
         this.startCreate(elementObjArray);
     }
     detachAll(){
-        console.log(this.fragArray);
         this.startDetach([...this.firstGenParent,...this.secondGenParent],this.secondGenChild);
         this.startDetach([...this.firstGenParent,...this.secondGenParent],this.secondGenParent);
         this.startDetach(this.bodyArray,[...this.firstGenChild,...this.firstGenParent]);
