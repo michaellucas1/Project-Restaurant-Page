@@ -8,8 +8,15 @@
 {"elementName":"greatGrandChildHtwo","tagName":"h2","isParent":false,"childOf":"grandChildDivTwo","content":"Join us for"},
 {"elementName":"greatGrandChildUl","tagName":"ul","isParent":true,"childOf":"grandChildDivTwo"},
 {"elementName":"greatGreatGrandChildLiOne","tagName":"li","isParent":true,"childOf":"greatGrandChildUl"},
-{"elementName":"greateGreatGreatGrandChildPone","tagName":"p","isParent":false,"childOf":"greatGreatGrandChildLiOne","content":"Daily Specials unique dishes crafted with the freshest catch of the day."},
+{"elementName":"greatGreatGreatGrandChildPone","tagName":"p","isParent":false,"childOf":"greatGreatGrandChildLiOne","content":"Daily Specials unique dishes crafted with the freshest catch of the day."},
 {"elementName":"greatGreatGrandChildLiTwo","tagName":"li","isParent":true,"childOf":"greatGrandChildUl"},
 {"elementName":"greateGreatGreatGrandChildPTwo","tagName":"p","isParent":false,"childOf":"greatGreatGrandChildLiTwo","content":"Happy Hour enjoy discounted drinks and appetizers from 4 PM to 6 PM."},
 {"elementName":"greatGreatGrandChildLiThree","tagName":"li","isParent":true,"childOf":"greatGrandChildUl"},
-{"elementName":"greateGreatGreatGrandChildPThree","tagName":"p","isParent":false,"childOf":"greatGreatGrandChildLiThree","content":"Weekend Brunch indulge in our special brunch menu every Saturday and Sunday from 10 AM to 2 PM."}]
+{"elementName":"greateGreatGreatGrandChildPThree","tagName":"p","isParent":false,"childOf":"greatGreatGrandChildLiThree","content":"Weekend Brunch indulge in our special brunch menu every Saturday and Sunday from 10 AM to 2 PM."},
+{"elementName":"grandChildDivThree","tagName":"div","isParent":true,"className":"message home-page","childOf":"childDiv"},
+{"elementName":"greatGrandChildDivOne","tagname":"div","isParent":true,"childOf":"grandChildDivThree"},
+{"elementName":"greatGreatGrandChildHTwoOne","tagName":"h2","isParent":false,"className":"contact","childOf":"grandChildDivThree","content":"Contact Us"},
+{"elementName":"greatGreatGrandChildHTwoTwo","tagName":"h2","isParent":false,"className":"location","childOf":"grandChildDivThree","content":"Location"},
+{"elementName":"greatGreatGrandChildPFour","tagName":"p","isParent":false,"childOf":"grandChildDivThree","content":"123 Atlantis Street, Outer Solar System, SS 54321"},
+{"elementName":"greatGreatGrandChildPSix","tagName":"p","isParent":false,"childOf":"grandChildDivThree","content":"(123)456-7890"},
+{"elementName":"greatGreatGrandChildPSeven","tagName":"p","isParent":false,"childOf":"grandChildDivThree","content":"info@neptuneskitchen.com"}]
