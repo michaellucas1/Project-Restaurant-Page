@@ -2,16 +2,24 @@ import "./styles/index.css";
 import displayHeader from "./component/Header";
 import displayBanner from "./component/HeroBanner";
 import displayHome from "./component/HomePage";
+import displayAbout from "./component/AboutPage";
+import displayMenu from "./component/MenuPage";
 
 class MyComponent {
     constructor(){
+        displayHeader.init();
+        displayHeader.add();
+        displayBanner.init();
+        displayBanner.add();
         this.header = document.querySelector('.header');
         this.home=document.querySelector("nav > button:nth-of-type(1");
         this.menu=document.querySelector("nav > button:nth-of-type(2)");
-        this.contact=document.querySelector("nav > button:nth-of-type(3)");
-        this.about=document.querySelector("nav > button:nth-of-type(4)");
+        this.about=document.querySelector("nav > button:nth-of-type(3)");
         this.addWindowListener();
         this.addButtonListener();
+        this.activePage=[];
+        this.activeButton=[];
+        this.changeActivePage(displayHome);
     }
     addWindowListener(){
         this.scrollOpacity = this.scrollOpacity.bind(this);
@@ -23,11 +31,9 @@ class MyComponent {
         const home = "renderHomePage"
         this.renderHomePage = this.renderHomePage.bind(this);
         this.renderMenuPage = this.renderMenuPage.bind(this);
-        this.renderContactPage = this.renderContactPage.bind(this);
         this.renderAboutPage = this.renderAboutPage.bind(this);
         this.home.addEventListener("click",this.renderHomePage);
         this.menu.addEventListener("click",this.renderMenuPage);
-        this.contact.addEventListener("click",this.renderContactPage);
         this.about.addEventListener("click",this.renderAboutPage);
     }
     removeAllListener(event){
@@ -36,7 +42,6 @@ class MyComponent {
         window.removeEventListener('beforeunload',this.removeAllListener);
         this.home.removeEventListener("click",this.renderHomePage);
         this.menu.removeEventListener("click",this.renderMenuPage);
-        this.contact.removeEventListener("click",this.renderContactPage);
         this.about.removeEventListener("click",this.renderAboutPage);
     }
     scrollOpacity(){
@@ -48,23 +53,33 @@ class MyComponent {
             this.header.style.backgroundColor=`rgba(35, 32, 28,0.3)`;
         }
     }
+    changeActivePage(currentPage){
+        if(this.activePage.length !==0){
+            this.activePage.pop().remove();
+        }
+        currentPage.init();
+        currentPage.add();
+        this.activePage.push(currentPage);
+    }
+    changeButtonColor(currentButton){
+        if(this.activeButton.length !==0){
+            this.activeButton.pop().style.color="rgb(255,255,255)";
+        }
+        currentButton.style.color="rgb(149, 1, 1)";
+        this.activeButton.push(currentButton);
+    }
     renderHomePage(){
-        console.log("this is  the home page")
+        this.changeActivePage(displayHome);
+        this.changeButtonColor(this.home);
     }
     renderMenuPage(){
-        console.log("this is  the menu page")
-    }
-    renderContactPage(){
-        console.log("this is  the contact page")
+        this.changeActivePage(displayMenu);
+        this.changeButtonColor(this.menu);
     }
     renderAboutPage(){
-        console.log("this is  the about page")
+        this.changeActivePage(displayAbout);
+        this.changeButtonColor(this.about);
     }
 }
-displayBanner.init();
-displayHeader.init();
-displayHeader.add();
-displayBanner.add();
-displayHome.init();
-displayHome.add();
 
+new MyComponent();
