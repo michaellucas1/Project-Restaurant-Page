@@ -28,4 +28,5 @@ module.exports = merge(common,{
       new CssMinimizerPlugin(),
     ],
   },
+  plugins: [new MiniCssExtractPlugin()],
 });
