@@ -20,6 +20,7 @@ class MyComponent {
         this.activePage=[];
         this.activeButton=[];
         this.changeActivePage(displayHome);
+        this.changeButtonColor(this.home);
     }
     addWindowListener(){
         this.scrollOpacity = this.scrollOpacity.bind(this);
