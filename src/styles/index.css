@@ -45,14 +45,6 @@ button{
 button:hover{
     color:red;
 }
-/*
-button:hover{
-    background-image: url("../resources/svg/neptune-planet-svgrepo-com.svg");
-    background-size:cover;
-    background-position:center;
-    background-repeat: no-repeat;
-    filter: grayscale(100%);
-}*/
 .wrapper{
     justify-content: center;  
     align-items:flex-end;
